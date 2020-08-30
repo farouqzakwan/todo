@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColumnsToListingTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class AddColumnsToListingTable extends Migration
      */
     public function up()
     {
-        Schema::table('listing', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
             $table->boolean('is_delete')->default(0);
-            $table->date('due_date');
+            $table->timestamps();
         });
     }
 
@@ -26,8 +28,6 @@ class AddColumnsToListingTable extends Migration
      */
     public function down()
     {
-        Schema::table('listing', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('categories');
     }
 }

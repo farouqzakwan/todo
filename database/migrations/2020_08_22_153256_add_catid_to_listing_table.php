@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddColumnsToListingTable extends Migration
+class AddCatidToListingTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,8 +14,7 @@ class AddColumnsToListingTable extends Migration
     public function up()
     {
         Schema::table('listing', function (Blueprint $table) {
-            $table->boolean('is_delete')->default(0);
-            $table->date('due_date');
+            $table->bigInteger('cat_id');
         });
     }
 
