@@ -9,6 +9,8 @@
 <body>
     <form action="" method="post">
         @csrf
+        @method('put')
+        <input type="text" name="nnn">
         <input type="submit" value="submit">
     </form>
 </body>

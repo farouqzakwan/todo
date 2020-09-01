@@ -18,11 +18,17 @@ Route::get('/', function () {
 });
 
 
-Route::get('/jjj', function () {
-    return view('jjj');
-});
+Route::get('/takdeid/','Haip@aa')->name('apa');
+
+Route::get('/denganid/{id}','Haip@aa')->name('apa');
+
+// Route::match(['get', 'post'], '/jjj', function () {
+//     return view('jjj');
+// });
 
 
-Route::post('/jjj', function () {
-    return view('welcome');
-});
+// Route::post('/jjj', function () {
+//     return view('welcome');
+// });
+
+Route::put('/denganid/{id}', 'Haip@bb');
