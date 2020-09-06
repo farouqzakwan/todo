@@ -21,6 +21,7 @@ Route::get('/', function () {
 Route::get('/takdeid/','Haip@aa')->name('apa');
 
 Route::get('/denganid/{id}','Haip@aa')->name('apa');
+// Route::get('/denganid/{id?}','Haip@aa')->name('apa'); //questionmark lepas id untuk bg default value
 
 // Route::match(['get', 'post'], '/jjj', function () {
 //     return view('jjj');

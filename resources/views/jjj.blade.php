@@ -8,8 +8,8 @@
 </head>
 <body>
     <form action="" method="post">
-        @csrf
-        @method('put')
+        @csrf  
+        @method('put')   {{-- Spoofing Form Methods --}}
         <input type="text" name="nnn">
         <input type="submit" value="submit">
     </form>
